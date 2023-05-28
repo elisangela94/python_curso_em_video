@@ -3,7 +3,7 @@
 print('Digite 6 números:')
 soma = 0
 
-for c in range(0,3):
+for c in range(0,6):
     numero = int(input('Qual numero deseja?'))
     if(numero%2) == 0:
         soma+= numero
