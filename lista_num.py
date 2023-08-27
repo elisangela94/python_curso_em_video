@@ -6,12 +6,16 @@
 valores = list()
 resp = "S"
 count = 0
+cinco = 0
 while True:
     num = int(input('Digite um número: '))
     if num not in valores:
         valores.append(num)
     else:
         print('Não é permitido valor duplicado ')
+    if num == 5:
+        cinco += 1
+
     count += 1
     resp = str(input('Deseja continuar?[S/N]: ')).upper()
     if resp in 'Nn':
@@ -20,3 +24,5 @@ while True:
 valores.sort(reverse=True)
 print(f'Foram digitados {count} números')
 print(f'Os valores em ordem decrescente são: {valores}')
+if cinco == 1:
+    print('O número cinco foi digitado!')
